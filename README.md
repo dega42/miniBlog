@@ -1,1 +1,1 @@
-# miniBlog
+MERN Stack miniBlog
