@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300;400;500;700&display=swap');
 :root {
     /* color */
     --color-background-body: hsl(0, 0%, 96%);
@@ -12,8 +12,8 @@
     --color-text-bright: #fff;
     --color-text-muted: #a9b1ba;
 
-    --color-link: #41adff;
-    --color-primary: hsl(150, 100%, 33%);
+    --color-link: #06A3DA;
+    --color-primary: #34AD54;
     --color-secondary: hsl(110, 39%, 51%);
     --color-success: #198754;
     --color-info: #0dcaf0;
@@ -30,10 +30,10 @@
     --color-form-text: #fff;
 
     /* font family */
-    --font-family-primary: 'Quicksand', sans-serif;
+    --font-family-primary: 'Roboto Condensed', sans-serif;
     --font-family-title: var(--font-family-primary);
     --font-family-nav: var(--font-family-primary);
-    --font-family-logo: 'Montserrat';
+    --font-family-logo: 'Montserrat', sans-serif;
 
     /* font weight */
     --font-weight-light: 300;
@@ -152,9 +152,9 @@ button,
 input[type="submit"],
 input[type="button"],
 input[type="reset"] {
-    border: 1px solid var(--color-background-alt);
+    border: 1px solid var(--color-primary);
     border-radius: var(--border-radius);
-    background-color: var(--color-background-alt);
+    background-color: var(--color-primary);
     box-shadow: var(--button-shadow) var(--color-shadow);
     color: inherit;
     font-weight: var(--font-weight-semiBold);
@@ -316,6 +316,11 @@ ul[role="menu"] {
     max-width: 900px;
 }
 
+@media only screen and (max-width: 768px) {
+    aside {
+        display: none;
+    }
+}
 
 /* Aside */
 .box {
@@ -333,4 +338,40 @@ ul[role="menu"] {
 
 .box h2 {
     margin-top: 0;
+}
+
+
+.navbar {
+    background-color: var(--color-info);
+    display: flex;
+    place-items: center;
+    justify-content: space-between;
+    /* padding: 1rem 0rem; */
+}
+
+.navbar a {
+    color: black;
+    font-size: var(--font-size-500);
+    font-weight: var(--font-weight-light);
+    text-transform: uppercase;
+    padding: .6rem .8rem;
+}
+
+.navbar a:hover {
+    text-decoration: none;
+    /* background-color:var(--color-text-bright); */
+    background-color:#fff;
+    filter: none;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+}
+
+.headerLogo a {
+    font-family: var(--font-family-logo);
+    font-weight: var(--font-weight-semiBold);
 }

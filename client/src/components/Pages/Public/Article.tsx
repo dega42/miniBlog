@@ -42,7 +42,7 @@ function Article() {
       <figure>
         <img src="https://via.placeholder.com/1024x400?text=Article+image" alt="Image" />
       </figure>
-      <span>Author</span> | <span>2023.10.12</span> | <span><Link to={`/blog/${article?.category.slug}`}>{article?.category.title}</Link></span> | <span>html, css, javascript</span>
+      <span>Author</span> | <span>2023.10.12</span> | <span><Link to={`/blog/tag/${article?.category.slug}`}>{article?.category.title}</Link></span> | <span>html, css, javascript</span>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, excepturi, pariatur id doloremque optio commodi sunt corrupti suscipit dolor molestiae, quidem ratione libero a ipsum eveniet cum. Illo libero harum suscipit ipsum eveniet accusantium sed voluptates esse cumque necessitatibus? In.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias nemo dolorum quidem vitae id modi officia dolorem earum quas placeat!</p>
 

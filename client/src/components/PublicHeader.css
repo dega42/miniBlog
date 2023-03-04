@@ -1,0 +1,189 @@
+/* Header & Navigation */
+.header * {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 42px auto auto auto;
+    grid-template-areas:
+        'brandLogo searchBar'
+        'categoryNavigation categoryNavigation'
+        'pageNavigation pageNavigation'
+        'socialLinks socialLinks';
+    justify-items: stretch;
+    align-items: stretch;
+    -webkit-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.33);
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.33);
+    z-index: 1000;
+}
+
+.header li {
+    list-style: none;
+}
+
+.header a {
+    text-decoration: none;
+    color: black;
+}
+
+.page-navigation {
+    grid-area: pageNavigation;
+    background-color: hsl(0, 0%, 90%);
+    text-align: center;
+    display: none;
+}
+
+.page-navigation ul {
+    line-height: 3rem;
+}
+
+.category-navigation {
+    grid-area: categoryNavigation;
+    background-color: hsl(0, 0%, 90%);
+    text-align: center;
+    display: none;
+    padding: 1rem 0;
+    border-bottom: 1px solid hsl(0, 0%, 85%);
+}
+
+.category-navigation ul {
+    line-height: 3rem;
+}
+
+.social-icons {
+    grid-area: socialLinks;
+    background-color: hsl(0, 0%, 90%);
+    padding: 1rem 2rem;
+    display: none;
+}
+
+.social-icons ul {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.search-bar {
+    grid-area: searchBar;
+    background-color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 1.3rem;
+}
+
+.search-bar ul {
+    display: flex;
+    gap: .8rem;
+    font-size: 1.3rem;
+}
+
+.brand-logo {
+    grid-area: brandLogo;
+    background-color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    padding: .1rem 1.3rem 0 1.3rem;
+}
+
+.brand-logo a {
+    font-family: var(--font-family-logo);
+    font-weight: 500;
+}
+
+.menu-active {
+    display: block;
+}
+
+@media only screen and (min-width: 768px) {
+    .header {
+        top: -30px;
+        grid-template-columns: auto 1fr 1fr auto;
+        grid-template-rows: 30px 55px;
+        grid-template-areas:
+            'pageNavigation pageNavigation socialLinks socialLinks'
+            'brandLogo categoryNavigation categoryNavigation searchBar';
+    }
+
+    .mobileNavIcon {
+        display: none;
+    }
+
+    .page-navigation {
+        grid-area: pageNavigation;
+        background-color: hsl(0, 0%, 85%);
+        display: flex;
+        align-items: center;
+        padding-left: 1.3rem;
+        font-size: 1rem;
+    }
+
+    .category-navigation {
+        grid-area: categoryNavigation;
+        background-color: var(--color-primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 0;
+    }
+
+    .category-navigation a {
+        font-family: var(--font-family-nav);
+        font-size: var(--font-size-400);
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .category-navigation a:hover {
+        text-decoration: none;
+    }
+
+    .category-navigation ul,
+    .page-navigation ul {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .social-icons {
+        grid-area: socialLinks;
+        background-color: hsl(0, 0%, 85%);
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 1.3rem;
+    }
+
+    .social-icons ul {
+        display: flex;
+        justify-content: flex-end;
+        font-size: 1.2rem;
+        gap: 1rem;
+    }
+
+    .search-bar {
+        grid-area: searchBar;
+        background-color: var(--color-primary);
+    }
+
+    .search-bar ul {
+        display: flex;
+    }
+
+    .brand-logo {
+        grid-area: brandLogo;
+        background-color: var(--color-primary);
+        display: flex;
+        align-items: center;
+    }
+}
