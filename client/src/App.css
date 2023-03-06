@@ -280,6 +280,12 @@ svg {
     padding: .3rem .6rem;
 }
 
+.icon-btn {
+    background-color: var(--color-background-alt);
+    border-color: var(--color-background-alt);
+    box-shadow: none;
+    padding: .4rem .6rem;
+}
 
 ul[role="menu"] {
     display: flex;

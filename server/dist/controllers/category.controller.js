@@ -8,9 +8,13 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.deleteCategory = exports.updateCategory = exports.createCategory = exports.getCategories = void 0;
 const category_model_1 = require("../models/category.model");
+const react_slugify_1 = __importDefault(require("react-slugify"));
 const getCategories = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     yield category_model_1.Category
         .find({ published: true })
@@ -33,13 +37,13 @@ const getCategories = (req, res) => __awaiter(void 0, void 0, void 0, function* 
 });
 exports.getCategories = getCategories;
 const createCategory = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const { title, slug } = req.body;
-    if (!title || !slug) {
-        return res.status(422).json({ message: 'The fields title and slug are required.' });
+    const { title } = req.body;
+    if (!title) {
+        return res.status(422).json({ message: 'The fields title are required.' });
     }
     const categoryInput = {
         title,
-        slug
+        slug: (0, react_slugify_1.default)(title)
     };
     yield category_model_1.Category.create(categoryInput)
         .then(category => {
@@ -74,7 +78,7 @@ const updateCategory = (req, res) => __awaiter(void 0, void 0, void 0, function*
         .then(category => {
         if (!category) {
             res.status(404).send({
-                message: `Cannot update Article` + category
+                message: `Cannot update Category` + category
             });
         }
         else {
@@ -94,12 +98,12 @@ const deleteCategory = (req, res) => __awaiter(void 0, void 0, void 0, function*
         .then(category => {
         if (!category) {
             res.status(404).send({
-                message: `Cannot delete Article with id=${id}.`
+                message: `Cannot delete Category with id=${id}.`
             });
         }
         else {
             res.send({
-                message: "Article was deleted successfully!"
+                message: "Category was deleted successfully!"
             });
         }
     })

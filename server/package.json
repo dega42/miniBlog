@@ -21,7 +21,8 @@
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^6.9.2",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "react-slugify": "^3.0.2"
   },
   "devDependencies": {
     "@types/cors": "^2.8.13",
