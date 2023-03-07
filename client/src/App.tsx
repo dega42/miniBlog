@@ -41,22 +41,6 @@ function App() {
           <Route path="/admin/settings" element={<Settings />} />
 
           <Route path="/*" element={<NoPage />} />
-          {/* <Route path="/" element={<PublicLayout children={undefined} />}>
-            <Route index element={<Home />} />
-            <Route path="about" element={<About />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="blog">
-              <Route path=":category" element={<Articles />} />
-              <Route path=":category/:articleSlug" element={<Article />} />
-
-            </Route>
-            <Route path="*" element={<NoPage />} />
-          </Route> */}
-          {/* <Route path='/admin' element={<AdminLayout children={undefined} />}>
-            <Route index element={<Dashboard />} />
-            <Route path="new-article" element={<NewArticle />} />
-            <Route path="articles" element={<ArticleList />} />
-          </Route> */}
         </Routes>
       </BrowserRouter>
     </div>

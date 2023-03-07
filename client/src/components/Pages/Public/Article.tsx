@@ -6,9 +6,9 @@ import { ArticleType } from '../../types/ArticleTypes';
 
 function Article() {
   const { articleSlug } = useParams();
-  const [ article, setArticle ] = useState<ArticleType | null>(null); // így vagy kezdeti title='', stb. értékkel?
-  const [ error, setError ] = useState<Object | null>(null);
-  const [ loading, setLoading ] = useState(false);
+  const [article, setArticle] = useState<ArticleType | null>(null); // így vagy kezdeti title='', stb. értékkel?
+  const [error, setError] = useState<Object | null>(null);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setLoading(true);

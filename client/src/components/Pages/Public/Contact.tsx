@@ -1,10 +1,8 @@
-import React from 'react'
 import PublicLayout from '../../Layouts/PublicLayout'
 
 function Contact() {
   return (
-    <PublicLayout>
-    
+    <PublicLayout>    
       <h1>Contact</h1>
       </PublicLayout>
   )

@@ -5,7 +5,6 @@ function About() {
   return (
     <PublicLayout>
       <h1>About</h1>
-
     </PublicLayout>
   )
 }

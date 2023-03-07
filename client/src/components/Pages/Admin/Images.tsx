@@ -4,7 +4,7 @@ import AdminLayout from '../../Layouts/AdminLayout'
 function Images() {
   return (
     <AdminLayout>
-    <h1>Images</h1>
+      <h1>Images</h1>
     </AdminLayout>
   )
 }

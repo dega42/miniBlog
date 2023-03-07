@@ -17,7 +17,7 @@ type ArticleInput = {
   category: ArticleDocument['category'];
   tags: ArticleDocument['tags'];
   published: ArticleDocument['published'];
-  
+
 };
 
 const articlesSchema = new Schema(
@@ -56,7 +56,7 @@ const articlesSchema = new Schema(
       type: Schema.Types.Boolean,
       required: true
     },
-    
+
   },
   {
     collection: 'articles',

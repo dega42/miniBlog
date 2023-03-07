@@ -1,14 +1,12 @@
-import React, { useEffect, useState } from 'react'
-import { Link, useLocation, useParams } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import ArticlePreview from '../../ArticlePreview';
 import LoadingSpinner from '../../LoadingSpinner/LoadingSpinner';
 import PublicGridLayout from '../../Layouts/PublicGridLayout';
 import { ArticleType } from '../../types/ArticleTypes';
 function Articles() {
 
-  const { categorySlug, tagSlug, searchTerm } = useParams();
-
-
+  const { categorySlug, tagSlug } = useParams();
   const [articles, setArticles] = useState<ArticleType[]>([]);
   const [error, setError] = useState<null>();
   const [isLoading, setIsLoading] = useState(false);
@@ -49,12 +47,8 @@ function Articles() {
 
   }, [categorySlug, tagSlug]);
 
-  console.log(categorySlug, tagSlug);
-
-
   const articleList = articles.map(article => {
     return (
-
       <ArticlePreview
         id={article._id}
         key={article._id}
@@ -66,18 +60,12 @@ function Articles() {
       />
     );
   })
-  console.log(articles);
 
   return (
-
-
     <PublicGridLayout>
       <h1>Articles</h1>
       {isLoading ? <LoadingSpinner /> : articleList}
-
     </PublicGridLayout>
-
-
   )
 }
 

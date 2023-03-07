@@ -7,9 +7,9 @@ type UserDocument = Document & {
 };
 
 type UserInput = {
-    username: UserDocument['username'];
-    email: UserDocument['email'];
-    password: UserDocument['password'];
+  username: UserDocument['username'];
+  email: UserDocument['email'];
+  password: UserDocument['password'];
 };
 
 const usersSchema = new Schema(

@@ -83,51 +83,7 @@ function PublicHeader() {
         </ul>
       </div>
     </header>
-    // <header>
-    //   <div className='container'>
-    //     <div className="topbar">
-    //       <nav>
-    //         <ul role='menu'>
-    //           <li><Link to={'/'}>Home</Link></li>
-    //           <li><Link to={'/about'}>About</Link></li>
-    //           <li><Link to={'/contact'}>Contact</Link></li>
-    //         </ul>
-    //       </nav>
-    //       <div>
-    //         <ul role='menu'>
-    //           <li><Link to={'/#'}><FontAwesomeIcon icon={faFacebook} /></Link></li>
-    //           <li><Link to={'/#'}><FontAwesomeIcon icon={faTwitter} /></Link></li>
-    //           <li><Link to={'/#'}><FontAwesomeIcon icon={faInstagram} /></Link></li>
-    //           <li><Link to={'/#'}><FontAwesomeIcon icon={faPinterest} /></Link></li>
-    //           <li><Link to={'/#'}><FontAwesomeIcon icon={faSkype} /></Link></li>
-    //         </ul>
-    //       </div>
-    //     </div>
-    //     <div className='navbar'>
-    //       <div className="headerLogo">
-    //         <Link to={'/'}>miniBlog</Link>
-    //       </div>
-    //       <nav>
-    //         <ul role='menu'>
-    //           {categoryList}
-    //         </ul>
-    //       </nav>
-    //       <div className={'search-bar'}>
-    //         <ul role='menu'>
-    //           <li><FontAwesomeIcon icon={faMagnifyingGlass} /></li>
-    //           <li className={'mobileNavIcon'} onClick={() => {
-    //             setIsNavExpanded(!isNavExpanded)
-    //           }}><FontAwesomeIcon icon={faBars} /></li>
-    //         </ul>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </header>
   )
 }
 
 export default PublicHeader
-
-function setLoading(arg0: boolean) {
-  throw new Error('Function not implemented.');
-}

@@ -4,7 +4,7 @@ import AdminLayout from '../../Layouts/AdminLayout'
 function Dashboard() {
   return (
     <AdminLayout>
-    <h1>Dashboard</h1>
+      <h1>Dashboard</h1>
     </AdminLayout>
   )
 }

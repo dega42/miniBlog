@@ -9,7 +9,6 @@ interface TagType {
   label: string
 }
 
-
 function NewArticle() {
 
   const refSlug = createRef<HTMLInputElement>();
@@ -20,7 +19,7 @@ function NewArticle() {
   const [error, setError] = useState<any>(null);
 
   const [tags, setTags] = useState<TagType[]>([]);
-  
+
   useEffect(() => {
     fetch('http://localhost:8000/api/v1/category')
       .then((responseCategory) => responseCategory.json())
@@ -45,7 +44,7 @@ function NewArticle() {
           { value: 'html', label: 'HTML' },
           { value: 'js', label: 'JS' }
         ]
-        console.log(tags);
+
 
         //setTags(tags)
         // setTags(data);

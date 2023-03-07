@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import {
-    createUser,
-    loginUser
+  createUser,
+  loginUser
 } from '../controllers/user.controller';
 
 //import auth from '../auth'
