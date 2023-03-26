@@ -60,6 +60,10 @@ const articlesSchema = new mongoose_1.Schema({
         type: mongoose_1.Schema.Types.Boolean,
         required: true
     },
+    publishedAt: {
+        type: mongoose_1.Schema.Types.Date,
+        required: false,
+    },
 }, {
     collection: 'articles',
     timestamps: true

@@ -194,9 +194,10 @@ export const createArticle = async (req: Request, res: Response) => {
     content,
     category,
     tags,
-    published: false
-
+    published: false,
+    publishedAt: new Date("2022-01-12T00:00:00.000+00:00"),
   };
+
   await Article.create(articleInput)
     .then(article => {
       if (!article) {
@@ -215,7 +216,7 @@ export const createArticle = async (req: Request, res: Response) => {
 }
 export const updateArticle = async (req: Request, res: Response) => {
   const id = req.params.id;
-  const { title, content, slug, category, tags } = req.body
+  const { title, content, slug, category, tags, published } = req.body
   if (!title || !content || !slug) {
     return res.status(422).json({ message: 'The fields title, slug and content are required' });
   }
@@ -225,8 +226,8 @@ export const updateArticle = async (req: Request, res: Response) => {
     content,
     category,
     tags,
-    published: false
-
+    published,
+    publishedAt: new Date("2022-01-12T00:00:00.000+00:00"),
   };
   await Article.findByIdAndUpdate(id, articleInput)
     .then(article => {

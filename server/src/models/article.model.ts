@@ -8,6 +8,8 @@ type ArticleDocument = Document & {
   category: CategoryDocument;
   tags: string[];
   published: boolean;
+  publishedAt: Date;
+  
 };
 
 type ArticleInput = {
@@ -17,7 +19,8 @@ type ArticleInput = {
   category: ArticleDocument['category'];
   tags: ArticleDocument['tags'];
   published: ArticleDocument['published'];
-
+  publishedAt: ArticleDocument['publishedAt'];
+  
 };
 
 const articlesSchema = new Schema(
@@ -55,6 +58,10 @@ const articlesSchema = new Schema(
     published: {
       type: Schema.Types.Boolean,
       required: true
+    },
+    publishedAt: {
+      type: Schema.Types.Date,
+      required: false,
     },
 
   },

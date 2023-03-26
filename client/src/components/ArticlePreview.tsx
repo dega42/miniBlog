@@ -18,7 +18,7 @@ function ArticePreview(props: {
     return (
         <div>
             <h3><Link to={`/blog/${props.category.slug}/${props.slug}`}>{props.title}</Link></h3>
-            <span>Author</span> | <span>2023.02.02</span> | {props.tags.map((tag) => tag).join(' ')}
+            <span>Author</span> | <span>2023.02.02</span> | {props.tags.map((tag) => tag).join(', ')}
             <figure>
                 <img src="https://via.placeholder.com/800x400?text=stock+photo" alt="Image" />
             </figure>

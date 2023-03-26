@@ -33,6 +33,8 @@ function Articles() {
       .then((response) => {
         setArticles(response.articles);
         setIsLoading(false)
+        console.log(response.articles);
+        
         // if (response.article.length < 1) setError({message: 'Out of articles'})
         setError(null);
       })

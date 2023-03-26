@@ -280,6 +280,12 @@ svg {
     padding: .3rem .6rem;
 }
 
+.box .button {
+    padding: .3rem .7rem;
+    margin: .2rem .2rem;
+    font-weight: var(--font-weight-medium);
+}
+
 .icon-btn {
     background-color: var(--color-background-alt);
     border-color: var(--color-background-alt);

@@ -203,7 +203,8 @@ const createArticle = (req, res) => __awaiter(void 0, void 0, void 0, function* 
         content,
         category,
         tags,
-        published: false
+        published: false,
+        publishedAt: new Date("2022-01-12T00:00:00.000+00:00"),
     };
     yield article_model_1.Article.create(articleInput)
         .then(article => {
@@ -225,7 +226,7 @@ const createArticle = (req, res) => __awaiter(void 0, void 0, void 0, function* 
 exports.createArticle = createArticle;
 const updateArticle = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const id = req.params.id;
-    const { title, content, slug, category, tags } = req.body;
+    const { title, content, slug, category, tags, published } = req.body;
     if (!title || !content || !slug) {
         return res.status(422).json({ message: 'The fields title, slug and content are required' });
     }
@@ -235,7 +236,8 @@ const updateArticle = (req, res) => __awaiter(void 0, void 0, void 0, function* 
         content,
         category,
         tags,
-        published: false
+        published,
+        publishedAt: new Date("2022-01-12T00:00:00.000+00:00"),
     };
     yield article_model_1.Article.findByIdAndUpdate(id, articleInput)
         .then(article => {
